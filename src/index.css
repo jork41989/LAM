@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face{
+  
+  src: local('Lato'), url('./fonts/Lato/Lato-Regular.ttf') format('truetype');
+  src: local('Oswald'), url('./fonts/Oswald/Oswald-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Oswald';
+  font-family: 'Lato';
+}
+
+p{
+  margin: 0 0 0 0;
+}

@@ -1,0 +1,43 @@
+#nav{
+  grid-column: 2 / span 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+  align-items: center;
+  font-size: 12px;
+  font-family: "Lato";
+  font-style: italic;
+}
+
+#links{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.navLink{
+  margin-right: 20px;
+}
+
+#logo{
+  background-size: cover;
+}
+
+#links a:visited{
+  font-family: 'Lato-blackItalic';
+}
+
+._01__history_______________02__team {
+  font-size: 12px;
+  font-family: "Lato";
+  color: rgb(254, 254, 255);
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.667;
+  position: absolute;
+  left: 1080.937px;
+  top: 19.498px;
+  z-index: 112;
+}

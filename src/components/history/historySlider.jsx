@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import { Paper, Button, CardMedia } from "@material-ui/core";
+import { CardMedia } from "@material-ui/core";
 
 export default function HistorySlider() {
 
@@ -115,12 +115,6 @@ export default function HistorySlider() {
     </div>,
   ];
 
-  const items = [
-    { src: "/images/item2.png" },
-    { src: "/images/item1.png" },
-    { src: "/images/item2.png" },
-    { src: "/images/item1.png" },
-  ];
   return (
     <Carousel autoPlay={false} style={{gridColumn: "2/span 2"}}>
       {cards}

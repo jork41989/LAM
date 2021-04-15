@@ -1,14 +1,14 @@
-import React, {useState} from "react";
-import {Mountain1, Mountain2} from './mountains'
+import React, { useState } from "react";
+import { Mountain1, Mountain2 } from "./mountains";
 
 export default function Tabs() {
-  const [tab, setTab] = useState("mountain 1")
+  const [tab, setTab] = useState("mountain 1");
   let styles = {
     tabMain: {
       display: "grid",
       gridTemplateColumns: "25% 25% 25% 25%",
       gridTemplateRows: "42px auto",
-      height: "100%"
+      height: "100%",
     },
     tabHead: {
       gridRow: "1/ span 1",
@@ -35,33 +35,43 @@ export default function Tabs() {
       cursor: "pointer",
     },
   };
-  let tabCheck = ()=> {
-    if(tab === "mountain 1") {
-      return Mountain1
-    } else{
-      return Mountain2
+  let tabCheck = () => {
+    switch (tab) {
+      case "mountain1":
+        document.getElementById("mountain1").classList.add("selected")
+        document.getElementById("mountain2").classList.remove("selected");
+        return Mountain1;
+      case "mountain2":
+        document.getElementById("mountain2").classList.add("selected");
+        document.getElementById("mountain1").classList.remove("selected");
+        return Mountain2;
+      default:
+        return Mountain1;
     }
-  }
+  };
 
   let tabChange = (e) => {
     setTab(e.target.id);
-  }
+  };
 
-return (
-  <div style={styles.tabMain}>
-    <div style={styles.tabHead}>
-      <div style={styles.tabItems}>
-        <div style={styles.tabItem} onClick={tabChange} id="mountain 1">
-          MOUNTAIN 1
-        </div>
-        <div style={styles.tabItem} onClick={tabChange} id="mountain 2">
-          MOUNTAIN 2
+  return (
+    <div style={styles.tabMain}>
+      <div style={styles.tabHead}>
+        <div style={styles.tabItems}>
+          <div
+            style={styles.tabItem}
+            onClick={tabChange}
+            class="selected"
+            id="mountain1"
+          >
+            MOUNTAIN 1
+          </div>
+          <div style={styles.tabItem} onClick={tabChange} id="mountain2">
+            MOUNTAIN 2
+          </div>
         </div>
       </div>
+      <div style={styles.tabContent}>{tabCheck()}</div>
     </div>
-    <div style={styles.tabContent}>
-      {tabCheck()}
-    </div>
-  </div>
-);
+  );
 }

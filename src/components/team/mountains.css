@@ -6,6 +6,12 @@
   background-size: cover !important;
 }
 
+.selected{
+  background-color: #b0b4be;
+  color: #414f6b !important;
+  text-decoration: underline;
+}
+
 
 .mountainContent{
   grid-column: 2;

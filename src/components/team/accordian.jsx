@@ -35,10 +35,14 @@ export default function Accordian() {
     console.log(mountCont)
     switch(mountain){
       case "mount1":
+        mount1.classList.add("selected")
+        mount2.classList.remove("selected");
         mount1Cont.classList.remove("hidden")
         mount2Cont.classList.add("hidden")
         break;
       case "mount2":
+        mount2.classList.add("selected");
+        mount1.classList.remove("selected");
          mount2Cont.classList.remove("hidden");
          mount1Cont.classList.add("hidden");
         break;
@@ -50,7 +54,7 @@ export default function Accordian() {
   return (
     <div style={{ height: "91%" }}>
       <div style={styles.tabHead}>
-        <div style={styles.tabItems} id="mount1" onClick={acordChange}>
+        <div style={styles.tabItems} id="mount1" className="selected" onClick={acordChange}>
           Mountain 1
         </div>
       </div>

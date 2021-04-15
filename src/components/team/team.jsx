@@ -1,9 +1,12 @@
 import React from "react";
 import Tabs from "./tabs";
+import Accordian from "./accordian"
+import { useMediaQuery } from "react-responsive";
+
 
 
 export default function Team() {
-
+const isTabletOrMobile = useMediaQuery({ query: "(max-width: 600px)" });
   const styles = {
     teamMain: {
       gridRow: "2 / span 1",
@@ -49,7 +52,16 @@ export default function Team() {
       gridColumn: "1/span 4"
     }
   };
-
+  let contCheck = () => {
+    if(isTabletOrMobile){
+      console.log("acord")
+      return <Accordian />;
+      
+    } else {
+      console.log("tab");
+      return <Tabs />;
+    }
+  }
 
   return (
     <div style={styles.teamMain}>
@@ -65,7 +77,7 @@ export default function Team() {
         </div>
       </div>
       <div style={styles.teamContentMain} id="contentsMain">
-       <Tabs />
+       {contCheck()}
       </div>
     </div>
   );

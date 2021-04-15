@@ -18,11 +18,11 @@ export default function Tabs() {
       gridTemplateColumns: "25% 25% 25% 25%",
     },
     tabContent: {
-      gridRow: "2",
+      gridRow: "2 / span 1",
       gridColumn: "1/ span 4",
     },
     tabItems: {
-      gridColumn: "2/ span 1",
+      gridColumn: "2 / span 2",
       display: "flex",
       color: "#b0b4be",
       fontFamily: "Oswald",

@@ -7,6 +7,7 @@ let styles = {
     height: "100%",
     display: "grid",
     gridTemplateColumns: "25% 25% 25% 25%",
+    gridAutoRows: "50% 50%",
   },
   mountain2MainDiv: {
     background: 'url("/images/mountain2.png")',
@@ -14,39 +15,33 @@ let styles = {
     height: "100%",
     display: "grid",
     gridTemplateColumns: "25% 25% 25% 25%",
+    gridAutoRows: "50% 50%",
   },
-  mountainContent: {
-    gridColumn: "2",
-    marginTop: "10%",
-    background: "rgba(255, 255, 255, 0.685)",
-    width: "100%",
-    padding: "20px 40px 20px 40px",
-  },
+  
   mountainSchedule: {
     fontFamily: "Oswald",
     fontWeight: "bold",
     fontSize: "32px",
-    color: "#414f6b"
+    color: "#414f6b",
   },
   mountainScheduleItems: {
-  fontSize: "16px",
-  fontFamily: "Lato",
-  color: "rgb(0, 0, 0)",
-  lineHeight: "1.5",
-  paddingTop: "20px"
+    fontSize: "16px",
+    fontFamily: "Lato",
+    color: "rgb(0, 0, 0)",
+    lineHeight: "1.5",
+    paddingTop: "20px",
   },
   mountainScheduleItemsLine: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    flexWrap: "wrap"
-  }
-
+    flexWrap: "wrap",
+  },
 };
 
 export const Mountain1 = (
   <div style={styles.mountain1MainDiv} className="mountainsBack">
-    <div style={styles.mountainContent}>
+    <div className="mountainContent">
       <div style={styles.mountainSchedule}>SCHEDULE</div>
       <div style={styles.mountainScheduleItems}>
         <div style={styles.mountainScheduleItemsLine}>
@@ -80,7 +75,7 @@ export const Mountain1 = (
 
 export const Mountain2 = (
   <div style={styles.mountain2MainDiv} className="mountainsBack">
-    <div style={styles.mountainContent}>
+    <div className="mountainContent">
       <div style={styles.mountainSchedule}>SCHEDULE</div>
       <div style={styles.mountainScheduleItems}>
         <div style={styles.mountainScheduleItemsLine}>

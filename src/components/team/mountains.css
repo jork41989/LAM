@@ -5,3 +5,27 @@
 .mountainsBack{
   background-size: cover !important;
 }
+
+
+.mountainContent{
+  grid-column: 2;
+  grid-row: 1 / auto;
+  margin-top: 10%;
+  background: rgba(255, 255, 255, 0.685);
+  padding: 20px 40px 20px 40px;
+}
+
+
+@media (max-width: 1050px) {
+.mountainContent {
+  grid-column: 2/ span 2;
+  grid-row: 1 ;
+  padding: 20px 40px 20px 40px;
+}
+}
+
+@media (max-width: 440px) {
+.mountainContent {
+  grid-row: 1/ span 2;
+}
+}

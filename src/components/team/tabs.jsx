@@ -8,6 +8,7 @@ export default function Tabs() {
       display: "grid",
       gridTemplateColumns: "25% 25% 25% 25%",
       gridTemplateRows: "42px auto",
+      height: "100%"
     },
     tabHead: {
       gridRow: "1/ span 1",

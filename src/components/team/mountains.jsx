@@ -1,3 +1,5 @@
+import "./mountains.css"
+
 let styles = {
   mountain1MainDiv: {
     background: 'url("/images/mountain1.png")',
@@ -43,7 +45,7 @@ let styles = {
 };
 
 export const Mountain1 = (
-  <div style={styles.mountain1MainDiv}>
+  <div style={styles.mountain1MainDiv} className="mountainsBack">
     <div style={styles.mountainContent}>
       <div style={styles.mountainSchedule}>SCHEDULE</div>
       <div style={styles.mountainScheduleItems}>
@@ -77,7 +79,7 @@ export const Mountain1 = (
 );
 
 export const Mountain2 = (
-  <div style={styles.mountain2MainDiv}>
+  <div style={styles.mountain2MainDiv} className="mountainsBack">
     <div style={styles.mountainContent}>
       <div style={styles.mountainSchedule}>SCHEDULE</div>
       <div style={styles.mountainScheduleItems}>

@@ -59,7 +59,9 @@ return (
         </div>
       </div>
     </div>
-    <div style={styles.tabContent}>{tabCheck()}</div>
+    <div style={styles.tabContent}>
+      {tabCheck()}
+    </div>
   </div>
 );
 }

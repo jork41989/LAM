@@ -2,6 +2,7 @@ import React from "react";
 import Tabs from "./tabs";
 import Accordian from "./accordian"
 import { useMediaQuery } from "react-responsive";
+import './teams.css'
 
 
 
@@ -13,20 +14,17 @@ const isTabletOrMobile = useMediaQuery({ query: "(max-width: 600px)" });
       gridColumn: "1/ span 4",
       display: "grid",
       gridTemplateColumns: "25% 25% 25% 25%",
-      gridTemplateRows: "115px 42px auto",
     },
     teamHead: {
       gridRow: "1",
       gridColumn: "2/ span 2",
       display: "flex",
-      flexDirection: "row",
       alignItems: "center",
-
     },
     teamHeadNumMain: {
       display: "flex",
-      flexDirection: "row",
       alignItems: "center",
+      flexDirection: "row",
     },
     teamHeadNum: {
       fontSize: "135px",
@@ -49,8 +47,8 @@ const isTabletOrMobile = useMediaQuery({ query: "(max-width: 600px)" });
     },
     teamContentMain: {
       gridRow: "3/ span 1",
-      gridColumn: "1/span 4"
-    }
+      gridColumn: "1/span 4",
+    },
   };
   let contCheck = () => {
     if(isTabletOrMobile){
@@ -64,8 +62,8 @@ const isTabletOrMobile = useMediaQuery({ query: "(max-width: 600px)" });
   }
 
   return (
-    <div style={styles.teamMain}>
-      <div style={styles.teamHead}>
+    <div style={styles.teamMain} className="teamMain">
+      <div style={styles.teamHead} className="teamHead">
         <div style={styles.teamHeadNumMain}>
           <div style={styles.teamHeadNum}>02.</div>
           <div style={styles.teamHeadPhrase}>CLIMB</div>
@@ -77,7 +75,7 @@ const isTabletOrMobile = useMediaQuery({ query: "(max-width: 600px)" });
         </div>
       </div>
       <div style={styles.teamContentMain} id="contentsMain">
-       {contCheck()}
+        {contCheck()}
       </div>
     </div>
   );

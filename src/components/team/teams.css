@@ -1,0 +1,20 @@
+
+
+.teamHead{
+flex-direction: row;
+}
+
+.teamMain{
+  grid-template-rows: 115px 42px auto;
+}
+
+
+@media (max-width: 800px) {
+.teamHead {
+  flex-direction: column;
+}
+.teamMain {
+  grid-template-rows: 316px 42px auto;
+}
+
+}

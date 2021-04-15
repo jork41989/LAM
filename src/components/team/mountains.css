@@ -24,7 +24,7 @@
 }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 800px) {
 .mountainContent {
   grid-row: 1/ span 2;
 }

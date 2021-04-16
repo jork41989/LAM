@@ -16,5 +16,17 @@ flex-direction: row;
 .teamMain {
   grid-template-rows: 316px 42px auto;
 }
+}
 
+@media(max-width: 600px){
+  #contentsMain {
+    height: 92%;
+  }
+}
+
+
+@media(max-width: 430px) {
+#contentsMain {
+  height: 94%;
+}
 }

@@ -1,5 +1,13 @@
+
+
 #home{
   grid-row: 1 / span 3;
   grid-column: 1/ span 4;
   z-index: -1;
+}
+
+@media (max-width: 650px) {
+#home {
+  background-position: center !important;
+}
 }

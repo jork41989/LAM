@@ -9,7 +9,6 @@ export default function Home() {
       style={{
         background: 'url("/images/heroHome.png")',
         backgroundSize: "cover",
-        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         
       }}
